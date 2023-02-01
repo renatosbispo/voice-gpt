@@ -36,7 +36,7 @@ const LocalisationRequestInterceptor = {
         lng: Alexa.getLocale(handlerInput.requestEnvelope),
         resources: languageStrings,
       })
-      .then((t) => {
+      .then((translate) => {
         handlerInput.translate = (...args) => translate(...args);
       });
   },
